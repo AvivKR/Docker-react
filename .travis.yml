@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t firstproj -f Dockerfile.dev .
+  - docker build -t firstproj .
 
 script:
   - docker run -e CI=true firstproj npm run test -- --coverage
